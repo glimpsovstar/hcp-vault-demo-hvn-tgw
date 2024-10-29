@@ -32,7 +32,7 @@ resource "hcp_aws_transit_gateway_attachment" "djoo_hcp_vault_demo_tgw_attachmen
   hvn_id                        = hcp_hvn.djoo_hcp_vault_demo_hvn.hvn_id
   transit_gateway_attachment_id = "djoo_hcp_vault_demo_hvn-tgw-attachment"
   transit_gateway_id            = aws_ec2_transit_gateway.twg-djoo_hcp_vault_demo.id
-  resource_share_arn            = aws_ram_resource_share.djoo_hcp_vault_demo_resource_association.arn
+  resource_share_arn            = aws_ram_resource_share.djoo_hcp_vault_demo_resource_share.arn
 }
 
 resource "hcp_hvn_route" "djoo_hcp_vault_demo_route" {
