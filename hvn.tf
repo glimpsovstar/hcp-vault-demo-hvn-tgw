@@ -1,5 +1,5 @@
 resource "hcp_hvn" "djoo_hcp_vault_demo_hvn" {
-  hvn_id         = "djoo_hcp_vault_demo_hvn"
+  hvn_id         = "djoo-hcp-vault-demo-hvn"
   cloud_provider = "aws"
   region         = var.region
   cidr_block     = var.hvn_cidr

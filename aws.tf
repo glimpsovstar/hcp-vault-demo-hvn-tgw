@@ -10,7 +10,7 @@ resource "aws_subnet" "djoo_hcp_vault_demo_subnet" {
 
 resource "aws_ec2_transit_gateway_vpc_attachment" "djoo_hcp_vault_demo_ec2_tgw_attachment" {
   subnet_ids         = [aws_subnet.djoo_hcp_vault_demo_subnet.id]
-  transit_gateway_id = aws_ec2_transit_gateway.djoo_hcp_vault_demo_ec2_tgw_attachment.id
+  transit_gateway_id = aws_ec2_transit_gateway.twg-djoo_hcp_vault_demo.id
   vpc_id             = aws_vpc.djoo_hcp_vault_demo_vpc.id
   depends_on = [ 
     aws_ec2_transit_gateway.twg-djoo_hcp_vault_demo, 
