@@ -9,6 +9,9 @@ resource "aws_subnet" "djoo_hcp_vault_demo_subnet" {
   vpc_id            = aws_vpc.djoo_hcp_vault_demo_vpc.id
   cidr_block = var.vpc_cidr
   availability_zone = var.az
+  tags = {
+    Name = "djoo HCP Vault Demo Subnet"
+  }
 }
 
 resource "aws_ec2_transit_gateway_vpc_attachment" "djoo_hcp_vault_demo_ec2_tgw_attachment" {
@@ -22,6 +25,9 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "djoo_hcp_vault_demo_ec2_tgw_a
 
 resource "aws_internet_gateway" "djoo_hcp_vault_demo_vpc-igw" {
   vpc_id = "${aws_vpc.djoo_hcp_vault_demo_vpc.id}"
+  tags = {
+    Name = "djoo HCP Vault Demo VPC IGW"
+  }
 }
 
 resource "aws_main_route_table_association" "main-vpc" {
@@ -46,4 +52,7 @@ resource "aws_route_table" "djoo_hcp_vault_demo-main-rt" {
       aws_ec2_transit_gateway.twg-djoo_hcp_vault_demo,
       aws_ec2_transit_gateway_vpc_attachment.djoo_hcp_vault_demo_ec2_tgw_attachment,
   ]
+  tags = {
+    Name = "djoo HCP Vault Demo Main Route Table"
+  }
 }
