@@ -30,7 +30,7 @@ resource "aws_internet_gateway" "djoo_hcp_vault_demo_vpc-igw" {
   }
 }
 
-resource "aws_main_route_table_association" "main-vpc" {
+resource "aws_main_route_table_association" "djoo_hcp_vault_demo_main-rt-assoc" {
   vpc_id         = "${aws_vpc.djoo_hcp_vault_demo_vpc.id}"
   route_table_id = "${aws_route_table.djoo_hcp_vault_demo-main-rt.id}"
 }
