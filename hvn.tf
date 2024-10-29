@@ -37,7 +37,7 @@ resource "hcp_aws_transit_gateway_attachment" "djoo_hcp_vault_demo_tgw_attachmen
 
 resource "hcp_hvn_route" "djoo_hcp_vault_demo_route" {
   hvn_link         = hcp_hvn.djoo_hcp_vault_demo_hvn.self_link
-  hvn_route_id     = "djoo-hcp-vault-demo-hvn-hvn-to-tgw-attachment"
+  hvn_route_id     = "djoo-hcp-vlt-demo-hvn-to-tgw-attachment"
   destination_cidr = aws_vpc.example.cidr_block
   target_link      = hcp_aws_transit_gateway_attachment.djoo_hcp_vault_demo_tgw_attachment.self_link
 }
