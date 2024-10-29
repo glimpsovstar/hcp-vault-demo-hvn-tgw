@@ -9,3 +9,7 @@ output "hvn-self-link" {
 output "hvn-cidr-block" {
   value = hcp_hvn.djoo_hcp_vault_demo_hvn.cidr_block
 }
+
+output "vpc-id" {
+  value = aws_vpc.djoo_hcp_vault_demo_vpc.id
+}
