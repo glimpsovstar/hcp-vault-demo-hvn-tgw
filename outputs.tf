@@ -13,3 +13,11 @@ output "hvn-cidr-block" {
 output "vpc-id" {
   value = aws_vpc.djoo_hcp_vault_demo_vpc.id
 }
+
+output "vpc-subnet-id" {
+  value = aws_subnet.djoo_hcp_vault_demo_subnet.id
+}
+
+output "security-group-id" {
+  value = aws_security_group.ssh-http-https-allowed.id
+}

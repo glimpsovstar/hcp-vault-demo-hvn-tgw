@@ -8,6 +8,7 @@ provider "aws" {
       Name = var.Name
       Owner = var.owner
       TTL = var.TTL
+      Environment = "dev"
     }
   } 
 }
