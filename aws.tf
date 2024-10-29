@@ -1,5 +1,8 @@
 resource "aws_vpc" "djoo_hcp_vault_demo_vpc" {
   cidr_block = "10.0.0.0/16"
+  tags = {
+    Name = "djoo HCP Vault Demo VPC"
+  }
 }
 
 resource "aws_subnet" "djoo_hcp_vault_demo_subnet" {
