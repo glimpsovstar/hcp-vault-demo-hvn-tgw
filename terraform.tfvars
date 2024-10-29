@@ -1,5 +1,5 @@
 region = "ap-southeast-2"
-az="apse2-az2"
+az="ap-southeast-2a"
 
 Name = "djoo"
 owner = "djoo at hashicorp"
