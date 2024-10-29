@@ -3,3 +3,4 @@
 ## Things to remember:
 - Once HVN is created, it can't be edited and deleted using Terraform.
 - To delete the HVN, it needs to be done from the HCP portal.
+- Manual attachment acception is required.
