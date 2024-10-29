@@ -30,14 +30,14 @@ resource "hcp_aws_transit_gateway_attachment" "djoo_hcp_vault_demo_tgw_attachmen
   ]
 
   hvn_id                        = hcp_hvn.djoo_hcp_vault_demo_hvn.hvn_id
-  transit_gateway_attachment_id = "djoo_hcp_vault_demo_hvn-tgw-attachment"
+  transit_gateway_attachment_id = "djoo-hcp-vault-demo-hvn-tgw-attachment"
   transit_gateway_id            = aws_ec2_transit_gateway.twg-djoo_hcp_vault_demo.id
   resource_share_arn            = aws_ram_resource_share.djoo_hcp_vault_demo_resource_share.arn
 }
 
 resource "hcp_hvn_route" "djoo_hcp_vault_demo_route" {
   hvn_link         = hcp_hvn.djoo_hcp_vault_demo_hvn.self_link
-  hvn_route_id     = "djoo_hcp_vault_demo_hvn-hvn-to-tgw-attachment"
+  hvn_route_id     = "djoo-hcp-vault-demo-hvn-hvn-to-tgw-attachment"
   destination_cidr = aws_vpc.example.cidr_block
   target_link      = hcp_aws_transit_gateway_attachment.djoo_hcp_vault_demo_tgw_attachment.self_link
 }
