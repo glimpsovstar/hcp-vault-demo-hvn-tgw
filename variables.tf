@@ -27,5 +27,5 @@ variable "vpc_cidr" {
 
 variable "az" {
   type = string 
-  default = "apse2-az2"
+  default = "ap-southeast-2a"
 }
