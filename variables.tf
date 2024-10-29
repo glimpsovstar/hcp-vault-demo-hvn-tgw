@@ -17,7 +17,7 @@ variable "TTL" {
 }
 variable "hvn_cidr" {
   type = string
-  default = "172.25.19.0/20"
+  default = "172.25.16.0/20"
 }
 
 variable "vpc_cidr" {
